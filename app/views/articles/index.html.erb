@@ -1,0 +1,26 @@
+<h1>Article listing page</h1>
+
+
+<table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @articles.each do |n| %>
+        <tr>
+          <td><%=  n.title %></td>
+          <td><%=  n.description %></td>
+          <td><a href="/articles/<%= n.id %>/edit">edit</a></td>
+        </tr>
+
+
+        <% end %>
+      </tbody>
+</table>
+
+<a href="/articles/new">Nuevo articulo</a>
