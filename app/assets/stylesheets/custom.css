@@ -1,0 +1,61 @@
+.navbar {
+  background-color: black !important;
+}
+.nav-link {
+  color: white !important;
+}
+html, body{
+  height: 100%;
+}
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#form{
+  left: 0px;
+}
+
+.jumbotron{
+  background-image: url('jacob-grishey-nAk84oiaVKE-unsplash.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  color: white;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: Black;
+  color: white !important;
+  text-align: center;
+}
+#page-content{
+  background-color: lightgrey;
+  flex:1 0 auto;
+  height: 100%;
+}
+#page-content-1{
+  background-color: lightgrey;
+  flex:1 0 auto;
+
+}
+
+.card-body form.button_to {
+    display: inline;
+}
+
+button.close#close-btn {
+    background: none;
+    border: none;
+
+    font-size: 1.5em;
+    float: right;
+}

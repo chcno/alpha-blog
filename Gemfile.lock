@@ -68,9 +68,14 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.4.7.0)
+      execjs (~> 2)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     capybara (3.36.0)
       addressable
@@ -84,11 +89,15 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.0)
+      railties (>= 6.0.0)
     debug (1.5.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
     digest (3.1.0)
     erubi (1.10.0)
+    execjs (2.8.1)
+    ffi (1.15.5-x64-mingw-ucrt)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -132,7 +141,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.4-x64-mingw-ucrt)
+    nokogiri (1.13.5-x64-mingw-ucrt)
       racc (~> 1.4)
     pg (1.3.5-x64-mingw-ucrt)
     public_suffix (4.0.7)
@@ -174,6 +183,8 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -219,7 +230,9 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bootstrap-sass
   capybara
+  cssbundling-rails
   debug
   importmap-rails
   jbuilder
@@ -231,7 +244,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  turbo-rails
+  turbo-rails (~> 1.0.0)
   tzinfo-data
   web-console
   webdrivers
