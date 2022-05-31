@@ -14,7 +14,7 @@
                         <h5 class="card-title">  <%= link_to n.title, article_path(n), class: "text-success" %></h5>
                         <p class="card-text"><%= truncate( n.description, length:20) %></p>
                         <%= link_to "show", article_path(n), class: "btn btn-outline-primary" %>
-                        <% if logged_in? && (n.user == current_user || current_user.admin?) %>
+                        <% if logged_in? && (n.user == current_user || current_user.admin?)  %>
                             <%= link_to "edit", edit_article_path(n), class: "btn btn-outline-secondary"%>
                             <%= button_to "Delete", article_path(n),class: "btn btn-danger",id: "delete-btn", method: :delete %>
                         <% end %>
