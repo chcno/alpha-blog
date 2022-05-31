@@ -10,8 +10,11 @@
                       </div>
                           <div class="card-body">
                             <div class="card-text text-left"><%=  simple_format(@article.description) %></div>
+                            <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
+
                             <%= link_to "edit", edit_article_path(@article), class: "btn btn-outline-secondary"%>
                             <%= button_to "Delete", article_path(@article),class: "btn btn-danger",id: "delete-btn", method: :delete %>
+                            <% end %>
                           </div>
                         <div class="card-footer text-muted">Created
                           <%=  time_ago_in_words(@article.created_at)  %> ago

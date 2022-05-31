@@ -1,7 +1,17 @@
 <div id="page-content-1">
   <h1 class="text-center pt-4">Article listing page</h1>
 
+
+  <div class="flickr_pagination ">
+
+    <%= will_paginate @articles, :container => false %>
+  </div>
+
     <%= render 'article' %>
+    <div class="flickr_pagination mb-5">
+
+      <%= will_paginate @articles, :container => false %>
+    </div>
 
 <button>
 <%= link_to "Crear nuevo articulo", new_article_path %>

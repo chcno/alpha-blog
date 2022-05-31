@@ -11,6 +11,9 @@ gem "sprockets-rails"
 
 gem 'bcrypt'
 
+gem 'will_paginate', '~> 3.3'
+gem 'will_paginate-bootstrap5'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

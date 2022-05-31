@@ -5,15 +5,19 @@
         <div class="col-xs-12 col-md-6 ">
           <div class="card text-center m-5 shadow bg-white rounded">
                   <div class="card-header font-italic">
-                By  <%= n.user.username %>
+                By  <%= link_to n.user.username ,user_path(n.user) %>
+
+                <%= image_tag("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", :alt => "rss feed", class: "img-thumbnail text-center mx-auto d-block", style: 'height:100px;width:auto;') %>
+
                   </div>
                       <div class="card-body">
                         <h5 class="card-title">  <%= link_to n.title, article_path(n), class: "text-success" %></h5>
                         <p class="card-text"><%= truncate( n.description, length:20) %></p>
-
-                        <%= link_to "edit", edit_article_path(n), class: "btn btn-outline-secondary"%>
                         <%= link_to "show", article_path(n), class: "btn btn-outline-primary" %>
-                        <%= button_to "Delete", article_path(n),class: "btn btn-danger",id: "delete-btn", method: :delete %>
+                        <% if logged_in? && n.user == current_user || current_user.admin? %>
+                            <%= link_to "edit", edit_article_path(n), class: "btn btn-outline-secondary"%>
+                            <%= button_to "Delete", article_path(n),class: "btn btn-danger",id: "delete-btn", method: :delete %>
+                        <% end %>
                       </div>
                     <div class="card-footer text-muted">Created
                       <%=  time_ago_in_words(n.created_at)  %> ago
