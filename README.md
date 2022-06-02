@@ -23,3 +23,11 @@ Things you may want to cover:
 
 * ...
 try new
+
+            <select class="form-select" multiple aria-label="multiple select example">
+                <option selected>Open this select menu</option>
+
+                <option value= category.id><%= category.name %></option>
+
+
+              </select>

@@ -8,7 +8,9 @@
                 By  <%= link_to n.user.username ,user_path(n.user) %>
 
                 <%= image_tag("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", :alt => "rss feed", class: "img-thumbnail text-center mx-auto d-block", style: 'height:100px;width:auto;') %>
-
+                <% n.categories.each do |cat| %>
+                  <%=link_to cat.name, cat, class:"badge bg-info text-decoration-none" %>
+                  <%end %>
                   </div>
                       <div class="card-body">
                         <h5 class="card-title">  <%= link_to n.title, article_path(n), class: "text-success" %></h5>
