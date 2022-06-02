@@ -59,6 +59,10 @@ button.close#close-btn {
     font-size: 1.5em;
     float: right;
 }
+button.navbar-toggler.collapsed {
+    background: white;
+}
+
 
 
 /* Pagination style*/
